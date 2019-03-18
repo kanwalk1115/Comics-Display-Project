@@ -1,0 +1,45 @@
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel = "stylesheet" type="text/css" href="login-comic.css">
+    </head>
+  <body>
+    <h1> Become a Member </h1>
+    <p> Create an account and save your favorite comics, characters and events!</p>
+
+
+<div>
+    <h2>Create an Account</h2>
+    <input type="text" id='emailTextBox' placeholder="Enter an email address"/>
+    <input type="password" id='passwordTextBox' placeholder="password" />
+    <button id='register'> Sign up </button>
+  </div>
+
+  <div>
+    <h3>Already a Member</h3>
+    <input type="text" id="loginTextBox" placeholder="Email"/>
+    <input type="password" id="loginPasswordBox" placeholder="Password" />
+    <button id="loginButton">Login</button>
+  </div>
+
+<div>
+  <h4> Sign Out </h4>
+  <button id="signOutButton">SignOut</button>
+  </body>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhcCAAu9uwN3WstTBXDUEGVuqt9pYX-Rw",
+    authDomain: "comics-group-project.firebaseapp.com",
+    databaseURL: "https://comics-group-project.firebaseio.com",
+    projectId: "comics-group-project",
+    storageBucket: "comics-group-project.appspot.com",
+    messagingSenderId: "61759697804"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src= "login-comic.js"> </script>
+</html>
