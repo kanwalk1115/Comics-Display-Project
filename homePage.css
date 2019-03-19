@@ -1,0 +1,45 @@
+#logo{
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-stretch: extra-expanded;
+  font-size-adjust: auto;
+  font-family: Benton Sans;
+  margin: 10px;
+}
+.navbar{
+  background-color: black;
+  color: white;
+}
+.navbarItems{
+  font: white;
+}
+.collapse ul li a{
+  color: black
+}
+
+nav a {
+  color: black
+}
+.carousel-caption{
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  /* filter: drop-shadow(16px 16px 10px white) */
+
+}
+
+.flex-container {
+  display: flex;
+}
+body {
+  background-color: black;
+  background-repeat: no-repeat;
+}
+
+.card{
+  color: white;
+  background-color: black;
+  text-shadow: 2px 2px 4px #000000;
+  filter: drop-shadow(16px 16px 10px white)
+
+}
