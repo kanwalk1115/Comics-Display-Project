@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel = 'stylesheet' href = 'videostyles.css'>
+    <meta charset="UTF-8">
+    <title>Videos</title>
+  </head>
+  <body onload = 'displayVideos(9)'>
+    <div class = 'video-player' id = 'videoDiv'>
+        <p id = "trailerDescription"></p>
+        <iframe id = "trailerBox" style = 'visibility: hidden'></iframe>
+    </div>
+      <UL id = 'videoTrailers'></UL>
+      <div id = 'loadMore' class = 'load-more'>
+          <button onclick = 'displayMore()'>Load More</button>
+      </div>
+    <script src = 'videosPage.js'></script>
+    <script src = 'videoSources.js'></script>
+  </body>
+</html>
