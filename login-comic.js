@@ -20,11 +20,11 @@ signOutButton.addEventListener('click', function(){
 })
 
 loginButton.addEventListener('click' , function(){
-  let email = emailTextBox.value
-  let password = passwordTextBox.value
+  let email = loginTextBox.value
+  let password = loginPasswordBox.value
 
   firebase.auth().signInWithEmailAndPassword(email, password).then(function (response){
-    window.location = "home-page.html"
+    window.location = "favorites.html"
   })
   .catch(function(error){
     var errorCode = error.code;
