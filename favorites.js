@@ -1,14 +1,26 @@
 let marvelCharacters = document.getElementById('marvelCharacters')
 let textSubmit = document.getElementById('textSubmit')
-heroArray = [] 
+let database = firebase.database()
+var heroArray = [] 
 
 function arrayHeroes() {
     //ideally get the heroarray from the firebase
+    let currentUser = getCurrentUser()
+    database.ref(`users/${currentUser}/favorites`)
+    .on('value',function(snapshot){
+    snapshot.forEach((childSnapshot) => {
+        heroArray.push(childSnapshot.val().hero)
+    })
+    })
     heroArray.forEach(item => {
         displayData(item, heroArray.indexOf(item))
     })
 }
 
+function getCurrentUser(){
+    let user = firebase.auth().currentUser();
+    return user
+}
 
 function createComicDetailsUniqueId(itemIndex) {
     return `${itemIndex}latestComicsDiv`
@@ -40,10 +52,7 @@ function displayDetails(charId,itemIndex){
         let content = []
         content.push(`<ul id = 'comicSeriesListUL'>Recent Comic Series lol`)
         for(let i = 0; i < 11; i ++){
-            content.push(`<li><a href = '${response2.data.results[i].urls[0].url}'>${response2.data.results[i].title}</a></li>`)
-            if(response2.data.results[i].thumbnail.path != 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available'){
-            content.push(`<img src = ${response2.data.results[i].thumbnail.path}/portrait_xlarge.jpg>`)}
-            
+            content.push(`<li><a href = '${response2.data.results[i].urls[0].url}'>${response2.data.results[i].title}</a></li>`)            
         }
         content.push(`</ul>`)
         latestComicsDiv.innerHTML = content.join('')
@@ -55,4 +64,8 @@ textSubmit.addEventListener('click', () => {
     let textField = document.getElementById('textField')
     heroArray.push(textField.value)
     displayData(textField.value,heroArray.indexOf(textField.value))
+    let favoritesAdd = database.ref(`users/${currentUser}/favorites`)    
+    favoritesAdd.push({
+      hero: textField.value
+    })
 })
