@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body onload = 'arrayHeroes()'>
+    <input id = 'textField' type = 'text'>
+    <input id = 'textSubmit' type = 'submit'>
+      <UL id = 'marvelCharacters'></UL>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhcCAAu9uwN3WstTBXDUEGVuqt9pYX-Rw",
+    authDomain: "comics-group-project.firebaseapp.com",
+    databaseURL: "https://comics-group-project.firebaseio.com",
+    projectId: "comics-group-project",
+    storageBucket: "comics-group-project.appspot.com",
+    messagingSenderId: "61759697804"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src = 'favorites.js'></script>
+</html>
