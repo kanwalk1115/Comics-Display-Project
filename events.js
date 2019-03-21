@@ -39,3 +39,12 @@ function displayData(){
         }
         )
     }
+
+    firebase.auth().onAuthStateChanged(user => {
+      if(user == null){
+        introText.innerHTML = 'Sign In'
+      }
+      else{
+        introText.innerHTML = ``
+      }
+    })

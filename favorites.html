@@ -14,10 +14,12 @@
       <a href="home.html">Characters</a>
       <a href="events.html">Events</a>
       <a href="videos.html">Movies</a>
+      <a href=# id = 'signOutSelect'>Sign Out</a>
     </div>
 
     <!-- Use any element to open the sidenav -->
     <span id = "openNav" onclick="openNav()">Menu</span>
+    <a id = 'introText' class="nav-link" href="login-comic.html"></a>
     <input id = 'textField' type = 'text'>
     <input id = 'textSubmit' type = 'submit'>
       <UL id = 'marvelCharacters'></UL>
@@ -37,4 +39,5 @@
   firebase.initializeApp(config);
 </script>
     <script src = 'favorites.js'></script>
+    <script src = 'signOut.js'></script>
 </html>
