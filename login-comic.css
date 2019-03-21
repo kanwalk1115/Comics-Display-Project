@@ -27,6 +27,7 @@ p{
 }
 .signIn {
   background-color: white;
+  opacity: .90;
   color: grey;
   padding-top: 0px;
   padding-bottom: 50px;
