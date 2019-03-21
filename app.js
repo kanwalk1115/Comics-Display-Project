@@ -1,4 +1,5 @@
 let marvelCharacters = document.getElementById('marvelCharacters')
+let searchSubmit = document.getElementById('searchSubmit')
 
 document.body.onload = function() {
   arrayHeroes()
@@ -35,6 +36,7 @@ function displayData(item, itemIndex){
     fetch("https://gateway.marvel.com/v1/public/characters?name=" + item.replace(" ","%20") + "&ts=1&apikey=d11ae31dc048dbd19178f875e7dc3ddf&hash=1b14ced7bbcdb443b4ed46455253af59")
     .then(response => response.json())
     .then(data => {
+      if(data.data.results.length != 0){
         marvelCharacters.innerHTML = marvelCharacters.innerHTML +
            `<div class="card hero" style="width: 18rem;">
                     <img src="${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg" class="card-img-top" alt="...">
@@ -53,6 +55,10 @@ function displayData(item, itemIndex){
               </div>
             `
             displayDetails(data.data.results[0].id,itemIndex)
+    }
+    else{
+      marvelCharacters.innerHTML = "This hero isn\'t in the database. Are you sure you spelled the name correctly?"
+    }
         }
         )
     }
@@ -76,3 +82,14 @@ function displayDetails(charId,itemIndex){
 
     })
 }
+
+searchSubmit.addEventListener('click', function(){
+  marvelCharacters.innerHTML = '' 
+  let searchText = document.getElementById('searchText').value
+  try{
+  displayData(searchText,0)
+  }
+  catch{
+    alert('hi')
+  }
+})
