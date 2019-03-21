@@ -18,10 +18,23 @@
     </div>
     <!-- Use any element to open the sidenav -->
     <span id = "openNav" onclick="openNav()">Menu</span>
+    <a id = 'introText' class="nav-link" href="login-comic.html"></a>
     <div id = "main" class="flex-container" onload = "arrayHeroes()">
       <UL id = 'marvelCharacters'></UL>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAhcCAAu9uwN3WstTBXDUEGVuqt9pYX-Rw",
+        authDomain: "comics-group-project.firebaseapp.com",
+        databaseURL: "https://comics-group-project.firebaseio.com",
+        projectId: "comics-group-project",
+        storageBucket: "comics-group-project.appspot.com",
+        messagingSenderId: "61759697804"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src = 'app.js'></script>
     <script src = 'homePage.js'></script>
     <script src = 'signOut.js'></script>
