@@ -1,7 +1,7 @@
 let marvelCharacters = document.getElementById('marvelCharacters')
 
 document.body.onload = function() {
-  arrayHeroes() 
+  arrayHeroes()
 }
 
 
@@ -36,14 +36,21 @@ function displayData(item, itemIndex){
     .then(response => response.json())
     .then(data => {
         marvelCharacters.innerHTML = marvelCharacters.innerHTML +
-           `<div class = "hero">
-             <h1>${data.data.results[0].name}</h1>
-              <p>${data.data.results[0].description}</p>
-              <img src = ${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg>
-              <a href = '${data.data.results[0].urls[1].url}'>Read More</a>
-              <h3>Recent Comics that ${data.data.results[0].name}'s been in: </h3>
-              <div id="${createComicDetailsUniqueId(itemIndex)}"></div>
-            </div>
+           `<div class="card hero" style="width: 18rem;">
+                    <img src="${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${data.data.results[0].name}</h5>
+                      <p class="card-text">${data.data.results[0].description}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Recent Comics that ${data.data.results[0].name}'s been in: </li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body" id="${createComicDetailsUniqueId(itemIndex)}">
+                      <a href="${data.data.results[0].urls[1].url}" class="card-link">Read More</a>
+                    </div>
+              </div>
             `
             displayDetails(data.data.results[0].id,itemIndex)
         }
