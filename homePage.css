@@ -38,6 +38,9 @@ nav a {
   display: flex;
   padding: 25px;
   margin: 25px;
+  background-color: white;
+  justify-content: center;
+
 }
 body {
   background-color: black;
@@ -62,6 +65,32 @@ body {
   margin-top: 40px;
 
 }
+
+.mr-3{
+  max-width:25%;
+  height:auto;
+}
+.media-object{
+  background-color: white;
+  justify-content: center;
+}
+.media{
+  justify-content: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* css for the side bar */
 /* The side navigation menu */
 /* The side navigation menu */
@@ -76,6 +105,8 @@ body {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  opacity: .75;
+
 }
 
 /* The navigation menu links */

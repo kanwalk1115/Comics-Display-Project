@@ -1,15 +1,41 @@
 body{
-  background-color: black;
+  background-color: #e4fcff;
   color: white;
   font-family: "Courier New", Courier, monospace;
-  text-align: center;
+  /* text-align: center; */
+  background-image: url("Photos/magneto2.jpg");
+  background-repeat: no-repeat;
+  padding-left: 0;
+  padding-right: 0;
 
 }
-
+button {
+  background-color: red;
+  color: white;
+  font-size: 20;
+}
 h1{
   font-size: 5vw;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 p{
-  font-size: 2vw;
+  font-size: 20px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.signIn {
+  background-color: white;
+  color: grey;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  margin-left: 350px;
+  margin-right: 350px;
+
+
+  text-align: center;
+}
+input {
+  font-size: 20px;
 }
