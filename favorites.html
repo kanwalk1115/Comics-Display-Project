@@ -2,13 +2,27 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Favorites</title>
+    <link rel="stylesheet" href="favorites.css"></link>
+
   </head>
   <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="homePage.html">Home</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="home.html">Characters</a>
+      <a href="events.html">Events</a>
+      <a href="videos.html">Movies</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <span id = "openNav" onclick="openNav()">Menu</span>
     <input id = 'textField' type = 'text'>
     <input id = 'textSubmit' type = 'submit'>
       <UL id = 'marvelCharacters'></UL>
   </body>
+  <script src = 'homePage.js'></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
 <script>
   // Initialize Firebase

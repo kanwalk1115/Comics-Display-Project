@@ -4,10 +4,25 @@
     <link rel = "stylesheet" type="text/css" href="home.css">
 
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Characters</title>
   </head>
-  <body class = "flex-container >div" onload = 'arrayHeroes()'>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="homePage.html">Home</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="home.html">Characters</a>
+      <a href="events.html">Events</a>
+      <a href="videos.html">Movies</a>
+    </div>
+    <!-- Use any element to open the sidenav -->
+    <span id = "openNav" onclick="openNav()">Menu</span>
+    <div class="flex-container" onload = "arrayHeroes()">
       <UL id = 'marvelCharacters'></UL>
+    </div>
+
     <script src = 'app.js'></script>
+    <script src = 'homePage.js'></script>
+
   </body>
 </html>
