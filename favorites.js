@@ -4,6 +4,13 @@ let database = firebase.database()
 var heroArray = []
 
 firebase.auth().onAuthStateChanged(user => {
+    if(user == null){
+        introText.innerHTML = 'Click Here to Sign In and Save Your Favorites.'
+      }
+      else{
+        introText.innerHTML = `Here Are Your Current Favorites, ${user.email}!`
+        introText.href = '#'
+      }
   window.userID = firebase.auth().currentUser.uid
   arrayHeroes(window.userID)
 })

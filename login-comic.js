@@ -7,7 +7,8 @@ let register = document.getElementById('register')
 let loginTextBox = document.getElementById('loginTextBox')
 let loginPasswordBox = document.getElementById('loginPasswordBox')
 let loginButton = document.getElementById('loginButton')
-
+let wrongPassword = document.getElementById('wrongPassword')
+let registerNotification = document.getElementById('registerNotification')
 let signOutButton = document.getElementById('signOutButton')
 signOutButton.addEventListener('click', function(){
 
@@ -24,11 +25,11 @@ loginButton.addEventListener('click' , function(){
   let password = loginPasswordBox.value
 
   firebase.auth().signInWithEmailAndPassword(email, password).then(function (response){
-    window.location = "favorites.html"
+    wrongPassword.innerHTML = 'Logging in now. Welcome!'
+    window.location = "homePage.html"
   })
   .catch(function(error){
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    wrongPassword.innerHTML = 'Incorrect username/password combination.'
 
   });
 })
@@ -39,12 +40,11 @@ register.addEventListener('click', function(){
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(user) {
-    console.log(user)
+    registerNotification.innerHTML = `Username ${email} has been created. Sign in below!` 
   })
     .catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorMessage)
+    registerNotification.innerHTML = `Your account wasn\'t created. Make sure your password is more than 6 characters and you have a valid email.` 
+      
 
 
 });
