@@ -21,13 +21,17 @@ body {
   opacity: .95;
 }
 #header {
-  text-indent: 60px
+  text-indent: 60px;
   text-shadow: 2px 2px 4px #000000;
-  filter: drop-shadow(16px 16px 10px grey)
-  color: grey;
+  filter: drop-shadow(16px 16px 10px grey);
+  color: red;
   position: relative;
   top: 10px;
-  left: 150px;
+  left: 100px;
+  position: fixed;
+  z-index: 1;
+  font-family: "Courier New", Courier, monospace;
+
 }
 
 
