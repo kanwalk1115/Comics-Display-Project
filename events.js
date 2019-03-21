@@ -1,4 +1,4 @@
-let marvelEvents = document.getElementById('marvelEvents')      
+let marvelEvents = document.getElementById('marvelEvents')
 
 
 
@@ -8,15 +8,34 @@ function displayData(){
     .then(data => {
             marvelEvents.innerHTML = `<li>`
         for(let i = 0; i < 21; i ++){
-            marvelEvents.innerHTML = marvelEvents.innerHTML + 
-            `<h1>${data.data.results[i].title}</h1>
-            <p>${data.data.results[i].description}</p>
-            <img src = ${data.data.results[i].thumbnail.path}/portrait_xlarge.jpg>
-            <a href = '${data.data.results[i].urls[0].url}'>Read More</a>
-            `}
-            marvelEvents.innerHTML = marvelEvents.innerHTML + `</li>`
+            marvelEvents.innerHTML = marvelEvents.innerHTML +
+            `<div class = "container">
+            
+                <br>
+                <br>
+                <br>
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="${data.data.results[i].thumbnail.path}/portrait_xlarge.jpg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="">${data.data.results[i].title}</h5>
+                        <p class="card-text">${data.data.results[i].description}</p>
+                        <a href = '${data.data.results[i].urls[0].url}'>Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <hr width="75%">
+            </div>
+      `}
+
 
         }
         )
     }
-

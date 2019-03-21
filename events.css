@@ -1,68 +1,37 @@
-#videoTrailers {
-    display: flex;
-    flex-wrap: wrap;
-    transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;
-    list-style-type: none;
+.container {
+  justify-content: center;
+  /* display: flex; */
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.mb-3 {
+  justify-content: center;
+}
+body {
+  background-image: url("Photos/spider-man.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+.card {
+  opacity: .95;
+}
+#header {
+  text-indent: 60px
+  text-shadow: 2px 2px 4px #000000;
+  filter: drop-shadow(16px 16px 10px grey)
+  color: grey;
+  position: relative;
+  top: 10px;
+  left: 150px;
 }
 
 
-.li-class {
-    width:30%;
-    padding-left:1em;
-}
 
-img {
-    width:100%;
-    height:100;
-    transition: all .2s ease-in-out;
-}
-
-img:hover {
-    transform: scale(1.1)
-}
-
-.video-player {
-    display:flex;
-    justify-content: center;
-    padding-bottom:1em;
-    background-color:rgb(59, 59, 59);
-    padding-top:1em;
-}
-
-.video-player p {
-    color:white;
-    font-size:1.5em;
-    padding-right:2em;
-    width:40%;
-    line-height: 2em;
-}
-
-.video-player a {
-    color:white;
-}
-
-#trailerBox {
-    transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;
-}
-
-.load-more {
-    display:flex;
-    justify-content: center;
-    padding-bottom:2em;
-}
-
-.load-more button {
-    width:100%;
-    background-color:rgb(185, 4, 4);
-    height:3em;
-    font-size:.8em;
-    font-weight:bolder;
-    transition: all .2s ease-in-out;
-}
-
-.load-more button:hover{
-    transform: scale(1.05)
-}
 /* css for the side bar */
 /* The side navigation menu */
 /* The side navigation menu */
