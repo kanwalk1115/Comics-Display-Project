@@ -40,6 +40,7 @@ function displayData(item, itemIndex){
             <p>${data.data.results[0].description}</p>
             <img src = ${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg>
             <a href = '${data.data.results[0].urls[1].url}'>Read More</a>
+            <button type = 'button' onclick = "removeItem('${data.data.results[0].name}')">&#10006</button>
             <h3>Recent Comics that ${data.data.results[0].name}'s been in: </h3>
             <div id="${createComicDetailsUniqueId(itemIndex)}"></div></li>
             `
@@ -74,3 +75,18 @@ textSubmit.addEventListener('click', () => {
       hero: textField.value
     })
 })
+
+
+function removeItem(heroName){
+    database.ref(`users/${window.userID}/favorites`).once('value',function(snapshot){
+        snapshot.forEach((childSnapshot) => {
+            if(childSnapshot.val().hero == heroName){
+                database.ref(`users/${window.userID}/favorites/${childSnapshot.key}`).remove()
+            }
+        })
+            heroArray = []
+            location.reload()
+            arrayHeroes(window.userID)
+        
+        })
+}
