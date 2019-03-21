@@ -1,34 +1,57 @@
 
 <html lang="en" dir="ltr">
   <head>
-    <link rel = "stylesheet" type="text/css" href="login-comic.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="homePage.css"></link>
+    <link rel="stylesheet" href="login-comic.css"></link>
+
+
+
+
     </head>
-  <body>
-    <h1> Become a Member </h1>
-    <p> Create an account and save your favorite comics, characters and events!</p>
+          <body>
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="homePage.html">Home</a>
+              <a href="home.html">Characters</a>
+              <a href="events.html">Events</a>
+              <a href="videos.html">Movies</a>
+            </div>
+
+            <!-- Use any element to open the sidenav -->
+            <span id = "openNav" onclick="openNav()">Menu</span>
+
+            <div class="signIn">
+            <h1> Become a Member </h1>
+          <b><p> Create an account and save your</p></b>
+          <b><p>favorite comics, characters and events!</p></b>
 
 
-<div>
-    <h2>Create an Account</h2>
-    <input type="text" id='emailTextBox' placeholder="Enter an email address"/>
-    <input type="password" id='passwordTextBox' placeholder="password" />
-    <button id='register'> Sign up </button>
-  </div>
+        <div>
+            <h2>Create an Account</h2>
+            <input type="text" id='emailTextBox' placeholder="Enter email address"/>
+            <input type="password" id='passwordTextBox' placeholder="Password" />
+            <button id='register'> Sign up </button>
+          </div>
 
-  <div>
-    <h3>Already a Member</h3>
-    <input type="text" id="loginTextBox" placeholder="Email"/>
-    <input type="password" id="loginPasswordBox" placeholder="Password" />
-    <button id="loginButton">Login</button>
-  </div>
+          <div>
+            <h3>Already a Member</h3>
+            <input type="text" id="loginTextBox" placeholder="Email"/>
+            <input type="password" id="loginPasswordBox" placeholder="Password" />
+            <button id="loginButton">Login</button>
+          </div>
 
-<div>
-  <h4> Sign Out </h4>
-  <button id="signOutButton">SignOut</button>
-  </body>
+        <div>
+          <h4> Sign Out </h4>
+          <button id="signOutButton">SignOut</button>
+          </div>
+        </div>
+          </body>
 
 
+<script src = 'homePage.js'></script>
 <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+
 <script>
   // Initialize Firebase
   var config = {
