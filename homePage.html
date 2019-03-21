@@ -18,6 +18,7 @@
       <a href="home.html">Characters</a>
       <a href="events.html">Events</a>
       <a href="videos.html">Movies</a>
+      <a href=# id = 'signOutSelect'>Sign Out</a>
     </div>
 
     <!-- Use any element to open the sidenav -->
@@ -34,21 +35,9 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
-                        <a class="navbarItems nav-link" href="homePage.html">Home <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="login-comic.html">Sign Up</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="login-comic.html">Sign In</a>
-                          <a class="dropdown-item" href="#">Forms</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Contact Us</a>
-                        </div>
+                        <a id = 'introText' class="nav-link" href="login-comic.html"></a>
                       </li>
                     </ul>
                   </div>
@@ -164,10 +153,24 @@
               </div>
       </div>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAhcCAAu9uwN3WstTBXDUEGVuqt9pYX-Rw",
+        authDomain: "comics-group-project.firebaseapp.com",
+        databaseURL: "https://comics-group-project.firebaseio.com",
+        projectId: "comics-group-project",
+        storageBucket: "comics-group-project.appspot.com",
+        messagingSenderId: "61759697804"
+      };
+      firebase.initializeApp(config);
+    </script>
 
     <!-- Optional JavaScript -->
     <script src = 'homePage.js'></script>
+    <script src = 'signOut.js'></script>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
