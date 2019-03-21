@@ -11,11 +11,13 @@
   flex-wrap: wrap;
   align-content: flex-start;
   /* background-color: black; */
-  color: white;
+  color: black;
   font-family: "Courier New", Courier, monospace;
 }
 
-
+ul {
+  display: flex;
+}
 
 
 
