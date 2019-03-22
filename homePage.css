@@ -1,3 +1,27 @@
+body {
+  border-right: 2em solid rgb(168, 4, 4);
+  border-top: .5em solid rgb(168,4,4);
+  z-index: 3;
+}
+
+.banner {
+  height:25em;
+  background-image:url("Photos/marvellogo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: createBox 1s;
+  width:100%;
+}
+
+@keyframes createBox{
+  from {
+    transform:scale(0,1);
+  }
+  to {
+    transform:scale(1,1);
+  }
+}
+
 #logo{
   background-color: red;
   color: white;
@@ -6,10 +30,29 @@
   font-size-adjust: auto;
   font-family: Benton Sans;
   margin: 10px;
+  transition:1s ease-in-out;
+}
+
+#introText {
+  text-align: center;
+  color:white;
+  font-size:2em;
+  letter-spacing:.1em;
+  transition:all .2s ease-in-out;
+  background-color:rgb(177, 177, 177);
+}
+
+#introText:hover{
+  transform:scale(1.05);
+}
+
+.intro-flex{
+  display:flex;
 }
 .navbar{
   background-color: black;
   color: white;
+  margin-left:8em;
 }
 .navbarItems{
   font: white;
@@ -29,9 +72,9 @@ nav a {
 }
 .size{
   z-index: 0;
-  padding: 25px;
-  margin: 25px;
-
+  width:60%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .flex-container {
@@ -54,16 +97,18 @@ body {
   filter: drop-shadow(16px 16px 10px white)
 }
 #openNav{
-  color: white;
-  font-size: 17px;
-  background-color: red;
-  /* border-radius: 25px; */
-  border: 2px solid red;
-  margin-top: 40px;
-  margin: 25px;
-  padding: 10px;
-  margin-top: 40px;
-
+  color: rgb(235, 235, 235);
+  text-align: center;
+  font-size: 2em;
+  margin-top:1em;
+  background-color: rgb(184, 27, 27);
+  border: 2px solid rgb(0, 0, 0);
+  width:4em;
+  height:3.5em;
+  line-height:3em;
+  cursor: pointer;
+  position:fixed;
+  z-index: 1;
 }
 
 .mr-3{
@@ -98,15 +143,13 @@ body {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 2; /* Stay on top */
   top: 0;
   left: 0;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  opacity: .75;
-
 }
 
 /* The navigation menu links */

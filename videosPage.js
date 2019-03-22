@@ -1,6 +1,5 @@
 let videoTrailers = document.getElementById('videoTrailers')
 let trailerBox = document.getElementById('trailerBox')
-let videoDiv = document.getElementsByClassName("videoDiv");
 let trailerDescription = document.getElementById('trailerDescription')
 let loadMore = document.getElementById('loadMore')
 

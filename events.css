@@ -1,15 +1,9 @@
 .container {
   justify-content: center;
-  /* display: flex; */
-
 }
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.mb-3 {
-  justify-content: center;
+
 }
 body {
   background-image: url("Photos/spider-man.jpg");
@@ -21,18 +15,20 @@ body {
   opacity: .95;
 }
 
+#marvelEvents{
+  margin-top:-2em;
+  margin-bottom:-2em;
+}
+
 #header {
   text-indent: 60px;
   text-shadow: 2px 2px 4px #000000;
   filter: drop-shadow(16px 16px 10px grey);
   color: red;
-  position: relative;
   top: 10px;
-  left: 100px;
-  position: fixed;
-  z-index: 1;
+  text-align:center;
+  font-size:5em;
   font-family: "Courier New", Courier, monospace;
-
 }
 
 
@@ -42,16 +38,16 @@ body {
 /* The side navigation menu */
 /* The side navigation menu */
 #openNav{
-  color: white;
-  font-size: 17px;
-  background-color: red;
-  /* border-radius: 25px; */
-  border: 2px solid red;
-  margin-top: 40px;
-  margin: 25px;
-  padding: 10px;
-  margin-top: 40px;
-
+  color: rgb(235, 235, 235);
+  text-align: center;
+  font-size: 2em;
+  margin-top:1em;
+  background-color: rgb(184, 27, 27);
+  border: 2px solid rgb(0, 0, 0);
+  width:4em;
+  height:3.5em;
+  line-height:3em;
+  cursor: pointer;
 }
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -64,7 +60,6 @@ body {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  opacity: .75;
 
 }
 

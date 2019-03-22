@@ -1,10 +1,24 @@
+.banner {
+  height:18em;
+  background-image:url("Photos/marvelmovielogo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #videoTrailers {
     display: flex;
     flex-wrap: wrap;
     transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;
     list-style-type: none;
+    justify-content: center;
 }
 
+
+h3{
+  padding-top:.5em;
+  padding-bottom: .5em;
+  text-align: center;
+}
 
 .li-class {
     width:30%;
@@ -24,9 +38,11 @@ img:hover {
 .video-player {
     display:flex;
     justify-content: center;
-    padding-bottom:1em;
-    background-color:rgb(59, 59, 59);
-    padding-top:1em;
+    background-color:rgb(80, 80, 80);
+    margin-top:1em;
+    margin-bottom:1em;
+    border-bottom:2px solid black;
+    border-top:2px solid black;
 }
 
 .video-player p {
@@ -35,6 +51,7 @@ img:hover {
     padding-right:2em;
     width:40%;
     line-height: 2em;
+    margin-top:4em;
 }
 
 .video-player a {
@@ -55,7 +72,7 @@ img:hover {
     width:100%;
     background-color:rgb(185, 4, 4);
     height:3em;
-    font-size:.8em;
+    font-size:1.2em;
     font-weight:bolder;
     transition: all .2s ease-in-out;
 }
@@ -67,16 +84,17 @@ img:hover {
 /* The side navigation menu */
 /* The side navigation menu */
 #openNav{
-  color: white;
-  font-size: 17px;
-  background-color: red;
-  /* border-radius: 25px; */
-  border: 2px solid red;
-  margin-top: 40px;
-  margin: 25px;
-  padding: 10px;
-  margin-top: 40px;
-
+  color: rgb(235, 235, 235);
+  text-align: center;
+  font-size: 2em;
+  margin-top:1em;
+  background-color: rgb(184, 27, 27);
+  border: 2px solid rgb(0, 0, 0);
+  width:4em;
+  height:3.5em;
+  line-height:3em;
+  cursor: pointer;
+  position:fixed;
 }
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -89,7 +107,7 @@ img:hover {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  opacity: .75;
+
 
 }
 
