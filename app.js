@@ -38,7 +38,7 @@ function displayData(item, itemIndex){
     .then(data => {
       if(data.data.results.length != 0){
         marvelCharacters.innerHTML = marvelCharacters.innerHTML +
-           `<div class="card hero flex" style="width: 18rem;">
+           `<div class="card hero" style="width: 18rem;">
                     <img src="${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">${data.data.results[0].name}</h5>
