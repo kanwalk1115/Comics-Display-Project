@@ -43,13 +43,24 @@ function displayData(item, itemIndex){
     .then(response => response.json())
     .then(data => {
         marvelCharacters.innerHTML = marvelCharacters.innerHTML +
-            `<li><h1>${data.data.results[0].name}</h1>
-            <p>${data.data.results[0].description}</p>
+            `
+            <br>
+            <br>
+            <li><div class="header"><h1>${data.data.results[0].name}</h1>
+            <button type = 'button' onclick = "removeItem('${data.data.results[0].name}')">&#10006</button></div>
+            <br>
             <img src = ${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg>
+            <br>
+            <br>
+            <p>${data.data.results[0].description}</p>
             <a href = '${data.data.results[0].urls[1].url}'>Read More</a>
-            <button type = 'button' onclick = "removeItem('${data.data.results[0].name}')">&#10006</button>
+            <br>
             <h3>Recent Comics that ${data.data.results[0].name}'s been in: </h3>
             <div id="${createComicDetailsUniqueId(itemIndex)}"></div></li>
+            <br>
+            <br>
+            <hr width="75%">
+
             `
             displayDetails(data.data.results[0].id,itemIndex)
         }
