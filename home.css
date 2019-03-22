@@ -1,22 +1,77 @@
-/*body{
-  background-color: black;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
-}*/
+
 
 .flex-container {
-  display: flex;
+
   height: 600px;
-  flex-wrap: wrap;
   align-content: flex-start;
+  background: rgba(red, green, blue, alpha);
+
   /* background-color: black; */
   color: black;
-  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Courier New", Courier, monospace; */
+}
+.clear {
+  background-color: transparent;
 }
 
+.card {
+  background-color: transparent;
+  text-shadow: 2px 2px 4px LightGrey;
+
+
+
+}
+#introText{
+  height: 3em;
+  z-index: 2;
+  color: black;
+}
+
+/* .card-body {
+  flex-direction: column;
+} */
+
+h1 {
+  padding-top: 1%;
+  padding-left: 5%;
+  text-shadow: 2px 2px 4px LightGrey;
+
+}
 ul {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body {
+  background-image: url("Photos/allHeroes2jpg.jpg");
+  background-repeat: no-repeat;
+  /* background-position: right top; */
+  background-attachment: fixed;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+  text-shadow: none;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+  text-shadow: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  text-shadow: none;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+  text-shadow: none;
 }
 
 
