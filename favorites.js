@@ -94,6 +94,6 @@ function removeItem(heroName){
             heroArray = []
             location.reload()
             arrayHeroes(window.userID)
-        
+
         })
 }

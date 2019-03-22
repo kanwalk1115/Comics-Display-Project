@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel = "stylesheet" type="text/css" href="home.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel = "stylesheet" type="text/css" href="home.css">
 
     <meta charset="UTF-8">
     <title>Characters</title>
@@ -23,11 +23,16 @@
     <span id = "openNav" onclick="openNav()">Menu</span>
 
 
-    <div id="main" class="flex-container">
-    <a id = 'introText' class="nav-link" href="login-comic.html"></a>
-    <input id = 'searchText' type = 'text' placeholder='Enter Superhero Name'>
-    <button id = 'searchSubmit' type = 'submit'>Search</button>
-      <UL id = 'marvelCharacters'></UL>
+    <div id="main" class="">
+      <a id = 'introText' class="nav-link" href="login-comic.html"></a>
+      <input id = 'searchText' type = 'text' placeholder='Enter Superhero Name'>
+      <button id = 'searchSubmit' type = 'submit'>Search</button>
+      <br>
+      <h1>Characters</h1>
+      <br>
+      <div class="flex-container flex">
+        <UL id = 'marvelCharacters' class="flex"></UL>
+      </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script>
@@ -43,7 +48,6 @@
       firebase.initializeApp(config);
     </script>
     <script src = 'app.js'></script>
-    <script src = 'homePage.js'></script>
     <script src = 'signOut.js'></script>
 
 

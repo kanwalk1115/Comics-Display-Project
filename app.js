@@ -38,16 +38,14 @@ function displayData(item, itemIndex){
     .then(data => {
       if(data.data.results.length != 0){
         marvelCharacters.innerHTML = marvelCharacters.innerHTML +
-           `<div class="card hero" style="width: 18rem;">
+           `<div class="card hero flex" style="width: 18rem;">
                     <img src="${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">${data.data.results[0].name}</h5>
                       <p class="card-text">${data.data.results[0].description}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Recent Comics that ${data.data.results[0].name}'s been in: </li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+                      <li class="list-group-item clear">Recent Comics that ${data.data.results[0].name}'s been in: </li>
                     </ul>
                     <div class="card-body" id="${createComicDetailsUniqueId(itemIndex)}">
                       <a href="${data.data.results[0].urls[1].url}" class="card-link">Read More</a>
@@ -84,7 +82,7 @@ function displayDetails(charId,itemIndex){
 }
 
 searchSubmit.addEventListener('click', function(){
-  marvelCharacters.innerHTML = '' 
+  marvelCharacters.innerHTML = ''
   let searchText = document.getElementById('searchText').value
   try{
   displayData(searchText,0)
