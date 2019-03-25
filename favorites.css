@@ -1,5 +1,27 @@
+p {
+  color: black;
+  text-shadow: 2px 2px white;
 
 
+}
+
+body {
+  background-image: url(Photos/deadpool.jpg);
+  background-attachment: fixed;
+
+}
+.header {
+  display: flex;
+  display: inline-block;
+}
+
+.header button {
+  position: absolute;
+  right: 0;
+}
+li {
+  list-style: none;
+}
 #openNav{
   color: white;
   font-size: 17px;
