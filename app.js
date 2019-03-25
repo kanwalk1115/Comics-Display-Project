@@ -45,7 +45,7 @@ function displayData(item, itemIndex){
                       <p class="card-text">${data.data.results[0].description}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item clear">Recent Comics that ${data.data.results[0].name}'s been in: </li>
+                      <li class="list-group-item clear">Recent Comics that ${data.data.results[0].name}'s been in (click comic to read more): </li>
                     </ul>
                     <div class="card-body" id="${createComicDetailsUniqueId(itemIndex)}">
                       <a href="${data.data.results[0].urls[1].url}" class="card-link">Read More</a>
@@ -68,7 +68,7 @@ function displayDetails(charId,itemIndex){
 
         let latestComicsDiv = document.getElementById(`${itemIndex}latestComicsDiv`)
         let content = []
-        content.push(`<ul id = 'comicSeriesListUL'>Recent Comic Series lol`)
+        content.push(`<ul id = 'comicSeriesListUL'>`)
         for(let i = 0; i < 11; i ++){
             content.push(`<li><a href = '${response2.data.results[i].urls[0].url}'>${response2.data.results[i].title}</a></li>`)
             if(response2.data.results[i].thumbnail.path != 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available'){

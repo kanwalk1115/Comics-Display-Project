@@ -2,6 +2,7 @@ let marvelCharacters = document.getElementById('marvelCharacters')
 let textSubmit = document.getElementById('textSubmit')
 let database = firebase.database()
 var heroArray = []
+let header2 = document.getElementById('header2')
 
 firebase.auth().onAuthStateChanged(user => {
     if(user == null){
@@ -11,7 +12,12 @@ firebase.auth().onAuthStateChanged(user => {
         introText.innerHTML = `Here Are Your Current Favorites, ${user.email}!`
         introText.href = '#'
       }
-  window.userID = firebase.auth().currentUser.uid
+    try{window.userID = firebase.auth().currentUser.uid}
+    catch{
+        header2.innerHTML = 'Please Login to add heroes to your favorites!'
+        textField.style.display = 'none'
+        textSubmit.style.display = 'none'
+    }
   arrayHeroes(window.userID)
 })
 function arrayHeroes(newUserID) {
@@ -47,14 +53,11 @@ function displayData(item, itemIndex){
             <br>
             <br>
             <li><div class="header"><h1>${data.data.results[0].name}</h1>
-            <button type = 'button' onclick = "removeItem('${data.data.results[0].name}')">&#10006</button></div>
+            </div>
             <br>
             <img src = ${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg>
-            <br>
-            <br>
-            <p>${data.data.results[0].description}</p>
-            <a href = '${data.data.results[0].urls[1].url}'>Read More</a>
-            <br>
+            <span class = 'read-more'><br><a href = '${data.data.results[0].urls[1].url}'>Read More</a></span>
+            <button type = 'button' onclick = "removeItem('${data.data.results[0].name}')">Remove Entry</button>
             <h3>Recent Comics that ${data.data.results[0].name}'s been in: </h3>
             <div id="${createComicDetailsUniqueId(itemIndex)}"></div></li>
             <br>
@@ -74,7 +77,7 @@ function displayDetails(charId,itemIndex){
 
         let latestComicsDiv = document.getElementById(`${itemIndex}latestComicsDiv`)
         let content = []
-        content.push(`<ul id = 'comicSeriesListUL'>Recent Comic Series lol`)
+        content.push(`<ul id = 'comicSeriesListUL'>`)
         for(let i = 0; i < 11; i ++){
             content.push(`<li><a href = '${response2.data.results[i].urls[0].url}'>${response2.data.results[i].title}</a></li>`)
         }

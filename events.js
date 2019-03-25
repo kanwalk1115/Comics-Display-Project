@@ -42,7 +42,7 @@ function displayData(){
 
     firebase.auth().onAuthStateChanged(user => {
       if(user == null){
-        introText.innerHTML = 'Sign In'
+        introText.innerHTML = 'Remember to Sign In!'
       }
       else{
         introText.innerHTML = ``

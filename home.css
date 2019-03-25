@@ -1,15 +1,30 @@
 
 
 .flex-container {
-
-  height: 600px;
-  align-content: flex-start;
   background: rgba(red, green, blue, alpha);
-
-  /* background-color: black; */
+  justify-content: center;
+  width:auto;
   color: black;
-  /* font-family: "Courier New", Courier, monospace; */
 }
+
+.list-group li {
+  background-color:rgb(236, 236, 236);
+
+}
+
+#comicSeriesListUL a{
+  color:black;
+}
+
+#marvelCharacters .card-body {
+  background-color:rgb(236, 236, 236);
+}
+
+.flex-container ul{
+  justify-content: center;
+  list-style-type: none;
+}
+
 .clear {
   background-color: transparent;
 }
@@ -17,8 +32,7 @@
 .card {
   background-color: transparent;
   text-shadow: 2px 2px 4px LightGrey;
-
-
+  padding:.2em;
 
 }
 #introText{
@@ -27,9 +41,6 @@
   color: black;
 }
 
-/* .card-body {
-  flex-direction: column;
-} */
 
 h1 {
   padding-top: 1%;
@@ -80,16 +91,16 @@ a:active {
   /* The side navigation menu */
   /* The side navigation menu */
   #openNav{
-    color: white;
-    font-size: 17px;
-    background-color: red;
-    /* border-radius: 25px; */
-    border: 2px solid red;
-    margin-top: 40px;
-    margin: 25px;
-    padding: 10px;
-    margin-top: 40px;
-
+    color: rgb(235, 235, 235);
+    text-align: center;
+    font-size: 2em;
+    margin-top:1em;
+    background-color: rgb(184, 27, 27);
+    border: 2px solid rgb(0, 0, 0);
+    width:4em;
+    height:3.5em;
+    line-height:3em;
+    cursor: pointer;
   }
   .sidenav {
     height: 100%; /* 100% Full-height */
@@ -102,7 +113,6 @@ a:active {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    opacity: .75;
 
   }
 
