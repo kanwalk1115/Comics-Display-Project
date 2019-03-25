@@ -53,7 +53,7 @@ function displayData(item, itemIndex){
             <br>
             <br>
             <li><div class="header"><h1>${data.data.results[0].name}</h1>
-            <button type = 'button' onclick = "removeItem('${data.data.results[0].name}')">&#10006</button></div>
+            </div>
             <br>
             <img src = ${data.data.results[0].thumbnail.path}/portrait_xlarge.jpg>
             <span class = 'read-more'><br><a href = '${data.data.results[0].urls[1].url}'>Read More</a></span>
